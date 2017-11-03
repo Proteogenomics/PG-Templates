@@ -44,9 +44,9 @@
             <div class="contact-container container-block">
                 <h4 class="section-title">Content</h4>
                 <ul class="list-unstyled contact-list">
-                    <li class="active"><i class="fa fa-angle-double-right"></i><a href="#">ProteoGenomics Pipeline</a></li>
-                    <li><a href="#about"><i class="fa fa-angle-double-right"></i>Peptide Quality Assessment</a></li>
-                    <li><a href="#contact"><i class="fa fa-angle-double-right"></i>Genome Coordinates Mapping</a></li>
+                    <li class="active"><i class="fa fa-angle-double-right"></i><a href="#proteogenomics">ProteoGenomics Pipeline</a></li>
+                    <li><i class="fa fa-angle-double-right"></i><a href="#pia-section">Peptide Quality Assessment</a></li>
+                    <li><i class="fa fa-angle-double-right"></i><a href="#pogo-section">Genome Coordinates Mapping</a></li>
                 </ul>
             </div>
         </div><!--//sidebar-wrapper-->
@@ -59,7 +59,7 @@
                     <p>Mass spectrometry (MS) based proteomics and next-generation sequencing technologies have improved our understanding of the crosstalk between genome, transcriptome, and proteome
                        and contribute to a better understanding of the variations between healthy and disease states. Substantial advances in MS technologies enable more complete identification
                        and quantification of proteomes, making these data more comparable with transcriptomics. However, most of the omics studies are performed in independent groups and most
-                       of the repositories and resources only stores data for a specific omics type: genomics or proteomics [3]. Recently, integrative analysis of quantitative measurements from
+                       of the repositories and resources only stores data for a specific omics type: genomics or proteomics. Recently, integrative analysis of quantitative measurements from
                        genomic and proteomic studies have identified novel insights into gene expression regulation, cell signaling, and disease.
                     </p>
                     <p>The <strong>PRIDE Proteogenomics Pipeline</strong> has the goal of mapping each Complete Submission in <a href="http://www.ebi.ac.uk/pride/">PRIDE Archive database</a> to ENSEMBL genomes
@@ -76,7 +76,7 @@
             </section><!--//section-->
             
             <section class="section summary-section">
-                <h2 class="section-title"><i class="fa fa-sitemap"></i>PRIDE Proteogenomics Pipeline</h2>
+                <h2 class="section-title" id="proteogenomics"><i class="fa fa-sitemap"></i>PRIDE Proteogenomics Pipeline</h2>
                 <p>
                     The process to map the different MS-based proteomics evidences to the corresponding genome coordinates can be classified in multiple steps:
                     (i) quality assessment of the PSMS/Peptide Evidences (ii) Mapping of the corresponding high-quality evidences to genome coordinates; (iii) Generation and publication of the resulted
@@ -87,7 +87,7 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Quality assessment of peptide evidences</h3>
+                            <h3 class="job-title" id="pia-section">Quality assessment of peptide evidences</h3>
                         </div><!--//upper-row-->
                         <div class="company">Protein Inference Toolkit</div>
                     </div><!--//meta-->
@@ -95,7 +95,7 @@
 
                         <p>Each Complete Submission in PRIDE is a combination of <strong>Result Files</strong> (containing the PSMs/Peptides) and <strong>Peaks lists</strong> files.
                         This combination is organized into <strong>Assays</strong> with the corresponding metadata associated (e.g tissue, taxonomy, cell type). In order to assess the
-                        quality of the corresponding PSMs/Peptides, the <a href="https://github.com/mpc-bioinformatics/pia">Protein Inference Toolkit (PIA)</a> has been used. In summary,
+                        quality of the corresponding PSMs/Peptides, the <a href="https://github.com/mpc-bioinformatics/pia">Protein Inference Toolkit (PIA)</a> has been used <a href="#pia">[1]</a>. In summary,
                         PIA supports the majority of established search engines and scoring models. It enables to translate those scoring models into a Global FDR score and filter <strong>1% FDR</strong> at PSM and
                         <strong>1% FDR</strong> Peptide levels.
                         </p>
@@ -106,12 +106,12 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Mapping the peptide Evidences to Genome Coordinates</h3>
+                            <h3 class="job-title" id="pogo-section">Mapping the peptide Evidences to Genome Coordinates</h3>
                         </div><!--//upper-row-->
                         <div class="company">PoGo Mapping Tool</div>
                     </div><!--//meta-->
                     <div class="details"  style="margin-bottom: 2em;">
-                        <p>The <a href="https://github.com/PRIDE-Toolsuite/PoGo/">PoGo tool</a> is used to map the resulted list of Peptides to the corresponding Genome Coordinates. In summary, PoGo leverages the annotated protein coding sequences (CDS)
+                        <p>The <a href="https://github.com/PRIDE-Toolsuite/PoGo/">PoGo tool</a> is used to map the resulted list of Peptides to the corresponding Genome Coordinates <a href="#pogo">[2]</a>. In summary, PoGo leverages the annotated protein coding sequences (CDS)
                             together with a reference protein sequence database (protein-DB) to map peptides to their genomic loci (<strong>Figure 3</strong>).
                         </p>
                         <img src="assets/images/pogo.png">
@@ -153,14 +153,14 @@
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-angle-double-right"></i>References</h2>
                 <div class="item">
-                    <span class="project-title">
-                        Uszkoreit J, Maerkens A, Perez-Riverol Y, Meyer HE, Marcus K, Stephan C, Kohlbacher O, Eisenacher M. PIA: An intuitive protein inference engine with a
+                    <span class="project-title" id="pia">
+                        [1] - Uszkoreit J, Maerkens A, Perez-Riverol Y, Meyer HE, Marcus K, Stephan C, Kohlbacher O, Eisenacher M. PIA: An intuitive protein inference engine with a
                         web-based user interface. Journal of proteome research. 2015 Jun 10;14(7):2988-97. <a href="http://pubs.acs.org/doi/abs/10.1021/acs.jproteome.5b00121">Original Publication</a>
                     </span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title">
-                        Schlaffner CN, Pirklbauer GJ, Bender A, Choudhary JS. Fast, Quantitative and Variant Enabled Mapping of Peptides to Genomes. Cell systems. 2017 Aug 23;5(2):152-6.
+                    <span class="project-title" id="pogo">
+                        [2] - Schlaffner CN, Pirklbauer GJ, Bender A, Choudhary JS. Fast, Quantitative and Variant Enabled Mapping of Peptides to Genomes. Cell systems. 2017 Aug 23;5(2):152-6.
                         <a href="http://www.sciencedirect.com/science/article/pii/S2405471217303332">Publication</a>
                     </span>
                 </div><!--//item-->
