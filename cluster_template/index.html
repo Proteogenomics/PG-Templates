@@ -82,7 +82,7 @@
                     (i) quality assessment of the PRIDE Cluster evidences (ii) Mapping of the corresponding high-quality evidences to genome coordinates; (iii) Generation and publication of the resulted
                     trackhubs in a public Repository (<strong>Figure 2</strong>).
                 </p>
-                <img src="assets/images/proteogeonomics_mapping.png"/></br></br>
+                <img src="assets/images/cluster-details.png"/></br></br>
 
                 <div class="item">
                     <div class="meta">
@@ -93,12 +93,12 @@
                     </div><!--//meta-->
                     <div class="details" style="margin-bottom: 2em;">
 
-                        <p>Each Complete Submission in PRIDE is a combination of <strong>Result Files</strong> (containing the PSMs/Peptides) and <strong>Peaks lists</strong> files.
-                        This combination is organized into <strong>Assays</strong> with the corresponding metadata associated (e.g tissue, taxonomy, cell type). In order to assess the
-                        quality of the corresponding PSMs/Peptides, the <a href="https://github.com/mpc-bioinformatics/pia">Protein Inference Toolkit (PIA)</a> has been used <a href="#pia">[1]</a>. In summary,
-                        PIA supports the majority of established search engines and scoring models. It enables to translate those scoring models into a Global FDR score and filter <strong>1% FDR</strong> at PSM and
-                        <strong>1% FDR</strong> Peptide levels.
+                        <p>Each Complete Submission in PRIDE is imported into PRIDE Cluster Pipeline using stringent 1% FDR thershold at PSM level.  In order to assess the
+                        quality of the corresponding PSMs/Peptides, the <a href="https://github.com/mpc-bioinformatics/pia">Protein Inference Toolkit (PIA)</a> has been used <a href="#pia">[1]</a>. Then, all the resulted identified and
+                        un-identified spectra is clustered using the popular framework for big data <a href="http://hadoop.apache.org/">Hadoop</a>. In summary, a spectrum cluster is a group of Mass Spec spectra that share the same characteristics,
+                        namely the shapes of their peaks. The spectra that are similar are grouped together in the PRIDE Cluster pipeline <a href="#cluster">[2]</a>.
                         </p>
+                        <img src="assets/images/cluster.png"/></br></br>
 
                     </div><!--//details-->
                 </div><!--//item-->
@@ -111,7 +111,7 @@
                         <div class="company">PoGo Mapping Tool</div>
                     </div><!--//meta-->
                     <div class="details"  style="margin-bottom: 2em;">
-                        <p>The <a href="https://github.com/PRIDE-Toolsuite/PoGo/">PoGo tool</a> is used to map the resulted list of Peptides to the corresponding Genome Coordinates <a href="#pogo">[2]</a>. In summary, PoGo leverages the annotated protein coding sequences (CDS)
+                        <p>The <a href="https://github.com/PRIDE-Toolsuite/PoGo/">PoGo tool</a> is used to map the resulted list of Peptides to the corresponding Genome Coordinates <a href="#pogo">[3]</a>. In summary, PoGo leverages the annotated protein coding sequences (CDS)
                             together with a reference protein sequence database (protein-DB) to map peptides to their genomic loci (<strong>Figure 3</strong>).
                         </p>
                         <img src="assets/images/pogo.png">
@@ -159,8 +159,14 @@
                     </span>
                 </div><!--//item-->
                 <div class="item">
+                    <span class="project-title" id="cluster">
+                        [2] - Griss J, Perez-Riverol Y, Lewis S, Tabb DL, Dianes JA, del-Toro N, Rurik M, Walzer M, Kohlbacher O, Hermjakob H, Wang R. Recognizing millions of consistently
+                        unidentified spectra across hundreds of shotgun proteomics datasets. Nature methods. 2016 Aug 1;13(8):651-6. <a href="http://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC4968634&blobtype=pdf">Original Publication</a>
+                    </span>
+                </div><!--//item-->
+                <div class="item">
                     <span class="project-title" id="pogo">
-                        [2] - Schlaffner CN, Pirklbauer GJ, Bender A, Choudhary JS. Fast, Quantitative and Variant Enabled Mapping of Peptides to Genomes. Cell systems. 2017 Aug 23;5(2):152-6.
+                        [3] - Schlaffner CN, Pirklbauer GJ, Bender A, Choudhary JS. Fast, Quantitative and Variant Enabled Mapping of Peptides to Genomes. Cell systems. 2017 Aug 23;5(2):152-6.
                         <a href="http://www.sciencedirect.com/science/article/pii/S2405471217303332">Publication</a>
                     </span>
                 </div><!--//item-->
@@ -173,8 +179,8 @@
                 </div><!--//intro-->
                 <div class="item">
                     <span class="project-title">
-                        Vizcaíno JA, Csordas A, Del-Toro N, Dianes JA, Griss J, Lavidas I, Mayer G, Perez-Riverol Y, Reisinger F, Ternent T, Xu QW. 2016 update of the
-                        PRIDE database and its related tools. Nucleic acids research. 2015 Nov 2;44(D1):D447-56. <a href="https://academic.oup.com/nar/article/44/D1/D447/2502640">Publication</a>
+                        Griss J, Perez-Riverol Y, Lewis S, Tabb DL, Dianes JA, del-Toro N, Rurik M, Walzer M, Kohlbacher O, Hermjakob H, Wang R. Recognizing millions of consistently
+                        unidentified spectra across hundreds of shotgun proteomics datasets. Nature methods. 2016 Aug 1;13(8):651-6. <a href="http://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC4968634&blobtype=pdf">Publication</a>
                     </span>
                 </div><!--//item-->
             </section><!--//section-->
