@@ -52,9 +52,20 @@
         </div><!--//sidebar-wrapper-->
         
         <div class="main-wrapper">
-            
+
             <section class="section summary-section">
-                <h2 class="section-title"><i class="fa fa-book"></i>Description</h2>
+                <h2 class="section-title"><i class="fa fa-book"></i>Dataset</h2>
+                <div class="upper-row">
+                    <h3 class="job-title" id="dataset">Title: {{dataset-title}}</h3>
+                </div><!--//upper-row-->
+                <div    class="summary">
+                    <p>{{dataset-description}}</p>
+                </div><!--//summary-->
+            </section><!--//section-->
+
+
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-book"></i>Methods</h2>
                 <div    class="summary">
                     <p>Mass spectrometry (MS) based proteomics and next-generation sequencing technologies have improved our understanding of the crosstalk between genome, transcriptome, and proteome
                        and contribute to a better understanding of the variations between healthy and disease states. Substantial advances in MS technologies enable more complete identification
@@ -148,7 +159,29 @@
                 </div><!--//item-->
                 
             </section><!--//section-->
-            
+
+
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-quote-left"></i>Cite Us: </h2>
+                <div class="intro">
+                    <p>If you use some specific parts of these pipeline, please cite us: </p>
+                </div><!--//intro-->
+                <div class="item">
+                    <span class="project-title">
+                        Vizcaíno JA, Csordas A, Del-Toro N, Dianes JA, Griss J, Lavidas I, Mayer G, Perez-Riverol Y, Reisinger F, Ternent T, Xu QW. 2016 update of the
+                        PRIDE database and its related tools. Nucleic acids research. 2015 Nov 2;44(D1):D447-56. <a href="https://academic.oup.com/nar/article/44/D1/D447/2502640">Publication</a>
+                    </span>
+                </div><!--//item-->
+            </section><!--//section-->
+
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-quote-left"></i>Cite Dataset: </h2>
+                <div class="item">
+                    <span class="project-title">
+                        {{dataset-cite}}
+                    </span>
+                </div><!--//item-->
+            </section><!--//section-->
 
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-angle-double-right"></i>References</h2>
@@ -166,18 +199,7 @@
                 </div><!--//item-->
             </section>
 
-            <section class="section projects-section">
-                <h2 class="section-title"><i class="fa fa-quote-left"></i>Cite Us: </h2>
-                <div class="intro">
-                    <p>If you use some specific parts of these pipeline, please cite us: </p>
-                </div><!--//intro-->
-                <div class="item">
-                    <span class="project-title">
-                        Vizcaíno JA, Csordas A, Del-Toro N, Dianes JA, Griss J, Lavidas I, Mayer G, Perez-Riverol Y, Reisinger F, Ternent T, Xu QW. 2016 update of the
-                        PRIDE database and its related tools. Nucleic acids research. 2015 Nov 2;44(D1):D447-56. <a href="https://academic.oup.com/nar/article/44/D1/D447/2502640">Publication</a>
-                    </span>
-                </div><!--//item-->
-            </section><!--//section-->
+
             
         </div><!--//main-body-->
     </div>
